@@ -2,11 +2,11 @@ module.exports = function(grunt){
     grunt.initConfig({
         htmlhint:{
             option:{
-                csslintrc:'./.csslintrc'
+                eslintrc:'./.eslintrc,json'
             },
-            src:['*.css']
+            target:['*.js']
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-csslint');
-    grunt.registerTask('default',['csslint']);
+    grunt.loadNpmTasks('grunt-eslint');
+    grunt.registerTask('default',['eslint']);
 }
